@@ -145,4 +145,3 @@ transacciones = [{
 for transaccion in transacciones:
 	asd = razonAltaChequera.resolver(cliente, transaccion)
 	print(asd)
-	
