@@ -145,4 +145,3 @@ transacciones = [{
 for transaccion in transacciones:
 	asd = razonAltaTarjetaCredito.resolver(cliente, transaccion)
 	print(asd)
-	
