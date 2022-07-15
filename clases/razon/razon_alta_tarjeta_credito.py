@@ -17,9 +17,9 @@ class Razon_alta_tarjeta_credito(Razon):
             return True
         return False
 
-    def limiteTarjetasCredito(self, tipoCliente, cantidadChequeras):
-        if tipoCliente == 'GOLD' and cantidadChequeras == 1:
+    def limiteTarjetasCredito(self, tipoCliente, cantidadTarjetas):
+        if tipoCliente == 'GOLD' and cantidadTarjetas == 1:
             return True
-        if tipoCliente == 'BLACK' and cantidadChequeras == 5:
+        if tipoCliente == 'BLACK' and cantidadTarjetas == 5:
             return True
         return False
