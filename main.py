@@ -14,7 +14,7 @@ cliente = {
     "Nombre": "Jorge",
     "Apellido":"Tarazona",
     "Dni":"42511235",
-    "tipo": "CLASSIC",
+    "tipo": "GOLD",
     "PuedeComprarDolar":False,
     "PuedeCrearChequera":False,
     "PuedeCrearTarjetaCredito":False
