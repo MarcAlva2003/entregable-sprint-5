@@ -14,7 +14,7 @@ cliente = {
     "Nombre": "Jorge",
     "Apellido":"Tarazona",
     "Dni":"42511235",
-    "tipo": "GOLD",
+    "tipo": "CLASSIC",
     "PuedeComprarDolar":False,
     "PuedeCrearChequera":False,
     "PuedeCrearTarjetaCredito":False
@@ -143,6 +143,6 @@ transacciones = [{
 		}]
 
 for transaccion in transacciones:
-	asd = razonAltaChequera.resolver(cliente, transaccion)
+	asd = razonCompraDolar.resolver(cliente, transaccion)
 	print(asd)
 	
