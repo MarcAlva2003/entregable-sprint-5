@@ -1,7 +1,8 @@
-# from .razon import Razon
-# from .razon_alta_chequera import RazonAltaChequera
-# from .razon_alta_tarjeta_credito import RazonAltaTarjetaCredito
-# from .razon_compra_dolar import RazonCompraDolar
-# from .razon_retiro_efectivo import RazonRetiroEfectivo
-# from .razon_transferencia_enviada import RazonTransferenciaEnviada
-# from .razon_transferencia_recibida import RazonTransferenciaRecibida
+from .razon import Razon
+from .razon_alta_chequera import Razon_alta_chequera
+from .razon_alta_tarjeta_credito import Razon_alta_tarjeta_credito
+from .razon_compra_dolar import Razon_compra_dolar
+from .razon_retiro_efectivo import Razon_retiro_efectivo
+from .razon_transferencia_enviada import Razon_transferencia_enviada
+from .razon_transferencia_recibida import Razon_transferencia_recibida
+
