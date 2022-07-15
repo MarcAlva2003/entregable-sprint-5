@@ -1,26 +1,25 @@
 #ALL APP HERE
-from .clases import Razon_alta_chequera,Razon_alta_tarjeta_credito,Razon_compra_dolar,Razon_retiro_efectivo,Razon_transferencia_enviada,Razon_transferencia_recibida
+from clases import Razon_alta_chequera,Razon_alta_tarjeta_credito,Razon_compra_dolar,Razon_retiro_efectivo,Razon_transferencia_enviada,Razon_transferencia_recibida
 
-razonAltaChequera = Razon_alta_chequera("Razon_ALta_Chequera")
-razonAltaTarjetaCredito = Razon_alta_tarjeta_credito("Razon_Alta_Tarjeta_Credito")
-razonCompraDolar = Razon_compra_dolar("Razon_Compra_Dolar")
-razonRetiroEfectivo = Razon_retiro_efectivo("Razon_Retiro_Efectivo")
-razonTransferenciaEnviada = Razon_transferencia_enviada("Razon_Transferencia_Enviada")
-razonTransferenciaRecibida = Razon_transferencia_recibida("Razon_Transferencia_Recibida")
+razonAltaChequera = Razon_alta_chequera("ALTA_CHEQUERA")
+razonAltaTarjetaCredito = Razon_alta_tarjeta_credito("ALTA_TARJETA_CREDITO")
+razonCompraDolar = Razon_compra_dolar("COMPRA_DOLAR")
+razonRetiroEfectivo = Razon_retiro_efectivo("RETIRO_EFECTIVO_CAJERO_AUTOMATICO")
+razonTransferenciaEnviada = Razon_transferencia_enviada("TRANSFERENCIA_ENVIADA")
+razonTransferenciaRecibida = Razon_transferencia_recibida("TRANSFERENCIA_RECIBIDA")
 
-ListaRazones=[razonAltaChequera,razonAltaTarjetaCredito,razonCompraDolar,razonRetiroEfectivo,razonTransferenciaEnviada,razonTransferenciaRecibida]
-
+listaRazones=[razonAltaChequera,razonAltaTarjetaCredito,razonCompraDolar,razonRetiroEfectivo,razonTransferenciaEnviada,razonTransferenciaRecibida]
 
 cliente = {
     "Nombre": "Jorge",
     "Apellido":"Tarazona",
     "Dni":"42511235",
-    "tipo": "CLASSIC",
+    "tipo": "GOLD",
     "PuedeComprarDolar":False,
     "PuedeCrearChequera":False,
     "PuedeCrearTarjetaCredito":False
-
 }
+
 transacciones = [{
 			"estado": "ACEPTADA",
 			"tipo": "RETIRO_EFECTIVO_CAJERO_AUTOMATICO",
@@ -142,3 +141,8 @@ transacciones = [{
 			"totalTarjetasDeCreditoActualmente" : 1,
 			"totalChequerasActualmente" : 1
 		}]
+
+for transaccion in transacciones:
+	asd = razonAltaChequera.resolver(cliente, transaccion)
+	print(asd)
+	

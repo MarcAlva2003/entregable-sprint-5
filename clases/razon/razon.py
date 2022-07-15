@@ -1,9 +1,6 @@
 class Razon:
-    def __init__(self,type):
-        self.type = type
+    def __init__(self,tipo):
+        self.tipo = tipo
 
-    def resolver(cliente, evento):
+    def resolver(self, cliente, transacciones):
         return " Soy el metodo Resolver"
-    
-
-
