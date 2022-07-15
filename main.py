@@ -143,6 +143,6 @@ transacciones = [{
 		}]
 
 for transaccion in transacciones:
-	asd = razonCompraDolar.resolver(cliente, transaccion)
+	asd = razonAltaTarjetaCredito.resolver(cliente, transaccion)
 	print(asd)
 	
