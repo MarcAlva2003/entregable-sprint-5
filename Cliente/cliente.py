@@ -25,7 +25,7 @@ class Cliente:
             dni = reader['dni'],
             direccion = reader['direccion'],
             tipo = reader['tipo'])
-
+t
         return cliente
 
     def puede_crear_chequera(self):
