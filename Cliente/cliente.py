@@ -109,14 +109,13 @@ class Cliente:
     def puede_crear_chequera(self):
         pass
 
-def puede_comprar_dolar(self):
+    def puede_crear_tarjeta_credito(self):
+        pass
+
+    def puede_comprar_dolar(self):
         pass
     
         
     def __repr__(self):
         return f"nombre: {self.nombre}, apellido: {self.apellido}, numero: {self.numero},dni: {self.dni},tipo:{self.tipo}"
 
-           
-cliente = Buscar_datos.iniciar_objeto_cliente()
-cliente.nombre('Juan Carlos') # Esto no funka
-print(cliente.nombre)
