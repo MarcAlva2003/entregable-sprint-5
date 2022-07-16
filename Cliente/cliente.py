@@ -1,5 +1,6 @@
 import json
-
+import pathlib
+from urllib.parse import ParseResultBytes
 
 class Cliente:
 
@@ -50,9 +51,7 @@ La mejor forma de abordar este problema es generar una aplicación que reciba co
 sea capaz de mostrar la razón de porque estas transacciones fueron rechazadas para ponerla a disposición del equipo de atención al cliente. Si son aceptadas simplemente se agrega al reporte la transacción que se hizo sin detalle particular, de esta forma quedara completo el informe.
 En el reporte se debe incluir el nombre de cliente, número, DNI, dirección y para cada transacción la fecha , el tipo de operación, el estado, el monto y razón por la cual se rechazó (vacío en caso de ser aceptada)."""
 
-"""import json
-import pathlib
-from urllib.parse import ParseResultBytes
+"""
 
 class Buscar_datos:
 
