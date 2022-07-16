@@ -1,3 +1,4 @@
+"""Hecho por Paulo"""
 import json
 import pathlib
 from urllib.parse import ParseResultBytes
