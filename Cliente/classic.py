@@ -1,4 +1,4 @@
-import json
+"""import json
 import pathlib
 from urllib.parse import ParseResultBytes
 
@@ -27,4 +27,4 @@ class Clienteclassic:
             direccion = reader['direccion'],
             tipo = reader['tipo']),
 
-        return clienteclassic
+        return clienteclassic"""
