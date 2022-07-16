@@ -1,3 +1,4 @@
+"""Hecho por Paulo"""
 import json
 import pathlib
 from urllib.parse import ParseResultBytes
@@ -108,10 +109,7 @@ class Cliente:
     def puede_crear_chequera(self):
         pass
 
-    def puede_crear_tarjeta_credito(self):
-        pass
-
-    def puede_comprar_dolar(self):
+def puede_comprar_dolar(self):
         pass
     
         
