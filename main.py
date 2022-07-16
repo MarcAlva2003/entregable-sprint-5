@@ -11,15 +11,23 @@ razonTransferenciaRecibida = Razon_transferencia_recibida("TRANSFERENCIA_RECIBID
 listaRazones=[razonAltaChequera,razonAltaTarjetaCredito,razonCompraDolar,razonRetiroEfectivo,razonTransferenciaEnviada,razonTransferenciaRecibida]
 
 cliente = {
-    "Nombre": "Jorge",
-    "Apellido":"Tarazona",
+    "Nombre": "Roberto",
+    "Apellido":"Robertos",
     "Dni":"42511235",
     "tipo": "GOLD",
     "PuedeComprarDolar":False,
     "PuedeCrearChequera":False,
-    "PuedeCrearTarjetaCredito":False
+    "PuedeCrearTarjetaCredito":False,
+	"limiteRetiroDiario": 20000,
+	"maximoTarjetaCredito":1,
+	"maximoChequera":1,
+	"comidionTransferencia":1.05,
+	"maximoARecibirSinAviso":500000,
+	"direccion": {
+		"calle":"Corrientes",
+		"altura":"1232"
+	}
 }
-
 transacciones = [{
 			"estado": "ACEPTADA",
 			"tipo": "RETIRO_EFECTIVO_CAJERO_AUTOMATICO",
