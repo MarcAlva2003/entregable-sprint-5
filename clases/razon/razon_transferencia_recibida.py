@@ -7,10 +7,10 @@ class Razon_transferencia_recibida(Razon):
 
     def resolver(self, cliente, transacciones):
         if not(transacciones['tipo'] == self.tipo):
-            return False
+            return ""
         if self.limiteMonto(cliente.tipo, transacciones['monto']):
             return 'Se excede de su monto limite de transacciones recibidas, debera avisar al banco para recibirla'
-        return False
+        return ""
 
 
     def limiteMonto(self, tipoCliente, monto):

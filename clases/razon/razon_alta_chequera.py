@@ -6,12 +6,12 @@ class Razon_alta_chequera(Razon):
     
     def resolver(self, cliente, transacciones):
         if not(transacciones['tipo'] == self.tipo):
-            return False
+            return ""
         if (self.clienteEsClasico(cliente.tipo)):
             return 'Lo clientes de tipo Classic no pueden tener chequeras, raja de aca'
         if self.limiteChequeras(cliente.tipo, transacciones['totalChequerasActualmente']):
             return 'Ya ha alcanzado el limite de chequeras que puede tener'
-        return False
+        return ""
 
     def clienteEsClasico(self, tipoCliente):
         if tipoCliente == 'CLASSIC':

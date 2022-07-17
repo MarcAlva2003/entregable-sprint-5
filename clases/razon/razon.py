@@ -3,4 +3,4 @@ class Razon:
         self.tipo = tipo
 
     def resolver(self, cliente, transacciones):
-        return " Soy el metodo Resolver"
+        return ""
