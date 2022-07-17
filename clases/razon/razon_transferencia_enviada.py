@@ -6,10 +6,10 @@ class Razon_transferencia_enviada(Razon):
 
     def resolver(self, cliente, transacciones):
         if transacciones['tipo'] == self.tipo:
-            return False
+            return ""
         if self.dineroInsuficiente(cliente.tipo, transacciones['saldoEnCuenta'], transacciones['monto']):
             return 'Dinero en cuenta insuficiente, pruebe con un monto menor.'
-        return False
+        return ""
         
 
     def dineroInsuficiente(self, tipoCuenta, saldoEnCuenta, montoARetirar):

@@ -6,10 +6,10 @@ class Razon_compra_dolar(Razon):
 
     def resolver(self, cliente, transacciones):
         if not(transacciones['tipo']== self.tipo):
-            return False
+            return ""
         if not(cliente.puede_comprar_dolar()):
             return "Los clientes CLASSIC no pueden comprar dolares por no tener cuenta en dolares "
-        return False
+        return ""
 
 
 
