@@ -11,6 +11,7 @@ class Razon_alta_tarjeta_credito(Razon):
             return 'Lo clientes de tipo Classic no pueden tener tarjetas de credito'
         if self.limiteTarjetasCredito(cliente.tipo, transacciones['totalTarjetasDeCreditoActualmente']):
             return 'Ya ha alcanzado el limite de Tarjetas que puede tener'
+        return False
 
     def clienteClassic(self, tipoCliente):
         if tipoCliente == 'CLASSIC':

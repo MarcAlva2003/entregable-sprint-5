@@ -14,6 +14,7 @@ class Razon_retiro_efectivo(Razon):
             return 'Dinero en cuenta insuficiente, pruebe con un monto menor.'
         if self.maximoDiarioRetirado(transacciones['cupoDiarioRestante'], transacciones['monto']):
             return 'Ya ha superado el monto maximo que puede retirar por día.'
+        return False
         
     def maximoDiarioRetirado(self, cupoDiarioRestante, montoARetirar):
         if cupoDiarioRestante < montoARetirar:

@@ -12,6 +12,7 @@ class Razon_transferencia_enviada(Razon):
             return False
         if self.dineroInsuficiente(cliente.tipo, transacciones['saldoEnCuenta'], transacciones['monto']):
             return 'Dinero en cuenta insuficiente, pruebe con un monto menor.'
+        return False
         
 
     def dineroInsuficiente(self, tipoCuenta, saldoEnCuenta, montoARetirar):
