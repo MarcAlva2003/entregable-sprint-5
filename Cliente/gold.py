@@ -2,10 +2,15 @@ from cliente import *
 
 class Gold(Cliente):
     
+    LIMITE_RETIRO_DIARIO = 20000
+    COMISION_TRANSFERENCIA = 0.005
+    MAXIMO_A_RECIBIR_SIN_AVISO = 500000
+    DESCUBIERTO_CUENTA_CORRIENTE = 10000
+    LIMITE_CUENTA_CORRIENTE = -10000
+    LIMITE_CHEQUERAS_UNIDADES = 1
+    LIMITE_TARJETA_UNIDADES = 1
 
     def __init__(self,nombre,apellido,numero,dni,direccion,tipo,transacciones):
-        
-        #Call to super funtion to have access to all atributes/methods
         super().__init__(
             nombre,apellido,numero,dni,direccion,tipo,transacciones
         )

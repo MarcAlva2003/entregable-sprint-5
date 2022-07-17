@@ -1,41 +1,5 @@
-"""Hecho por Paulo"""
 import json
 import pathlib
-from urllib.parse import ParseResultBytes
-
-class Buscar_datos:
-
-    @classmethod
-    def buscar_archivo(cls):
-
-        ruta = pathlib.Path('./datos')
-
-        print('Los archivos de clientes disponibles son los siguientes:')
-        for archivo_json in ruta.glob('*.json'):
-            print(f"Archivo: {archivo_json}")
-            
-        archivo_cliente = input('Ingrese el nombre del archivo del cliente: ')
-           
-        with open(archivo_cliente,'r') as f:
-                 reader = json.load(f)
-           
-        return reader
-
-    @classmethod
-    def iniciar_objeto_cliente(cls):
-
-        reader = Buscar_datos.buscar_archivo()
-           
-        cliente = Cliente(nombre = reader['nombre'],
-            apellido = reader['apellido'],
-            numero = reader['numero'],
-            dni = reader['dni'],
-            direccion = reader['direccion'],
-            tipo = reader['tipo'],
-            transacciones = reader['transacciones'])
-
-        return cliente
-
 
 class Cliente:
 
@@ -52,55 +16,48 @@ class Cliente:
     @property
     def nombre(self):
         return self._nombre
-
-    @property
-    def apellido(self):
-        return self._apellido
-
-    @property
-    def numero(self):
-        return self._numero
-
-    @property
-    def dni(self):
-        return self._dni
-    
-    @property
-    def direccion(self):
-        return self._direccion
-
-    @property
-    def tipo(self):
-        return self._tipo
-    
-    @property
-    def transacciones(self):
-        return self._transacciones
-
     @nombre.setter
     def nombre(self,nuevo_nombre):
         self._nombre = nuevo_nombre
 
+    @property
+    def apellido(self):
+        return self._apellido
     @apellido.setter
     def apellido(self,nuevo_apellido):
         self._nombre = nuevo_apellido
 
+    @property
+    def numero(self):
+        return self._numero
     @numero.setter
     def numero(self,nuevo_numero):
         self._numero = nuevo_numero
-    
+
+    @property
+    def dni(self):
+        return self._dni
     @dni.setter
     def dni(self,nuevo_dni):
         self._dni = nuevo_dni
-
+    
+    @property
+    def direccion(self):
+        return self._direccion
     @direccion.setter
     def direccion(self,nuevo_direccion):
         self._direccion = nuevo_direccion
 
+    @property
+    def tipo(self):
+        return self._tipo
     @tipo.setter
     def tipo(self,nuevo_tipo):
         self._tipo = nuevo_tipo
-
+    
+    @property
+    def transacciones(self):
+        return self._transacciones
     @transacciones.setter
     def transacciones(self,nuevo_transacciones):
         self._transacciones = nuevo_transacciones

@@ -1,11 +1,14 @@
 from cliente import *
 
 class Black(Cliente):
+
+    LIMITE_RETIRO_DIARIO = 100000
+    DESCUBIERTO_CUENTA_CORRIENTE = 10000
+    LIMITE_CHEQUERAS_UNIDADES = 2
+    LIMITE_TARJETA_UNIDADES = 5
     
 
     def __init__(self,nombre,apellido,numero,dni,direccion,tipo,transacciones):
-        
-        #Call to super funtion to have access to all atributes/methods
         super().__init__(
             nombre,apellido,numero,dni,direccion,tipo,transacciones
         )

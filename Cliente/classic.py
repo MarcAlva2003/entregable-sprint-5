@@ -1,10 +1,13 @@
 from cliente import *
 
 class Classic(Cliente):
+
+    LIMITE_RETIRO_DIARIO = 10000
+    COMISION_TRANSFERENCIA = 0.01
+    MAXIMO_A_RECIBIR_SIN_AVISO = 150000
     
 
     def __init__(self,nombre,apellido,numero,dni,direccion,tipo,transacciones):
-        
         super().__init__(
             nombre,apellido,numero,dni,direccion,tipo,transacciones
         )
