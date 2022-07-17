@@ -1,13 +1,16 @@
+from cmath import log
 from .razon import Razon
+from ..cliente import *
 
 class Razon_transferencia_enviada(Razon):
     def __init__(self, tipo):
         super().__init__(tipo)
 
     def resolver(self, cliente, transacciones):
+        print('entro')
         if transacciones['tipo'] == self.tipo:
             return False
-        if self.dineroInsuficiente(cliente['tipo'], transacciones['saldoEnCuenta'], transacciones['monto']):
+        if self.dineroInsuficiente(cliente.tipo, transacciones['saldoEnCuenta'], transacciones['monto']):
             return 'Dinero en cuenta insuficiente, pruebe con un monto menor.'
         
 

@@ -1,4 +1,3 @@
-from operator import truediv
 from .razon import Razon
 
 class Razon_retiro_efectivo(Razon):
@@ -7,9 +6,11 @@ class Razon_retiro_efectivo(Razon):
 
 
     def resolver(self, cliente, transacciones):
+        print(type(transacciones['tipo']))
+        print(type(self.tipo))
         if transacciones['tipo'] == self.tipo:
             return False
-        if self.dineroInsuficiente(cliente['tipo'], transacciones['saldoEnCuenta'], transacciones['monto']):
+        if self.dineroInsuficiente(cliente.tipo, transacciones['saldoEnCuenta'], transacciones['monto']):
             return 'Dinero en cuenta insuficiente, pruebe con un monto menor.'
         if self.maximoDiarioRetirado(transacciones['cupoDiarioRestante'], transacciones['monto']):
             return 'Ya ha superado el monto maximo que puede retirar por día.'

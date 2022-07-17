@@ -141,3 +141,11 @@ transacciones = [{
 			"totalChequerasActualmente" : 1,
             "razon":"Esta es una razon de rechazo"
 		}]
+
+content = ''
+
+for transaccion in transacciones:
+	row = '<tr><td>'+transaccion['estado']+'</td><td>' + transaccion['tipo']+'</td></tr>'
+	content += row
+
+print(content)
