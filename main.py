@@ -25,6 +25,5 @@ for transaccion in transaccionesCliente:
 			break
 	transaccion['razon'] = razonRechazo
 
-for transaccion in transaccionesCliente:
-	print(transaccion)
-	print('----------------')
+creadorHtml = CreadorHtml(nombreArchivoHtml, transaccionesCliente, dataCliente)
+creadorHtml.crearHtml()
