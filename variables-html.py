@@ -147,7 +147,7 @@ transacciones = [{
 
 content = ''
 for transaccion in transacciones:
-	row = '<tr><td>'+transaccion['fecha']+'</td><td>' + transaccion['tipo']+'</td><td>' + transaccion['estado']+'</td><td>' + transaccion['monto']+'</td><td>' + transaccion['razon']+'</td></tr>'
+	row = '<tr><td>'+transaccion['fecha']+'</td><td>' + transaccion['tipo']+'</td><td>' + transaccion['estado']+'</td><td>' + str (transaccion['monto'])+'</td><td>' + transaccion['razon']+'</td></tr>'
 	
 
 	content += row

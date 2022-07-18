@@ -1,4 +1,3 @@
-import re
 from .razon import Razon
 
 class Razon_alta_chequera(Razon):
