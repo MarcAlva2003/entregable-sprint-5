@@ -145,9 +145,27 @@ transacciones = [{
             "razon":"Esta es una razon de rechazo"
 		}]
 
-content = ''
-for transaccion in transacciones:
-	row = '<tr><td>'+transaccion['fecha']+'</td><td>' + transaccion['tipo']+'</td><td>' + transaccion['estado']+'</td><td>' + str (transaccion['monto'])+'</td><td>' + transaccion['razon']+'</td></tr>'
-	
 
-	content += row
+class CreadorHtml:
+
+    def __init__(self, nombreNuevoArchivo, transacciones, cliente):
+        self.nombreNuevoArchivo = nombreNuevoArchivo
+        self.transacciones = transacciones
+        self.cliente = cliente
+
+    def crearHtml(self):
+        content = self.obtenerContenidoHtml(self.transacciones)
+        return content
+
+    def obtenerContenidoHtml(self, transacciones):
+        contentHtml = ''
+        for transaccion in transacciones:
+            row = '<tr><td>'+transaccion['fecha']+'</td><td>' + transaccion['tipo']+'</td><td>' + transaccion['estado']+'</td><td>' + str (transaccion['monto'])+'</td><td>' + transaccion['razon']+'</td></tr>'
+            contentHtml += row
+        return contentHtml
+
+    def reemplazarHtml(self, content):
+        pass
+
+prueba = CreadorHtml(nombreHTML, transacciones, cliente)
+print(prueba.crearHtml())

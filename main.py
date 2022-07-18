@@ -12,16 +12,8 @@ razonTransferenciaRecibida = Razon_transferencia_recibida("TRANSFERENCIA_RECIBID
 listaRazones=[razonAltaChequera,razonAltaTarjetaCredito,razonCompraDolar,razonRetiroEfectivo,razonTransferenciaEnviada,razonTransferenciaRecibida]
 
 dataCliente = Buscar_datos.iniciar_objeto_cliente()
-
-
-
-# for transaccion in transacciones:
-# 	asd = razonAltaTarjetaCredito.resolver(cliente, transaccion)
-# 	print(asd)
-
 transaccionesCliente = dataCliente.transacciones
 
-# print(transaccionesCliente)
 
 for transaccion in transaccionesCliente:
 	razonRechazo = ''
@@ -31,10 +23,3 @@ for transaccion in transaccionesCliente:
 			break
 	transaccion['razon'] = razonRechazo
 
-for transaccion in transaccionesCliente:
-	print(transaccion)
-	print('---------')
-
-
-
-# print(dataCliente.tipo)
