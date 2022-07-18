@@ -20,3 +20,4 @@ class Classic(Cliente):
 
     def puede_comprar_dolar(self):
         return False
+        

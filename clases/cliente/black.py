@@ -6,7 +6,6 @@ class Black(Cliente):
     DESCUBIERTO_CUENTA_CORRIENTE = 10000
     LIMITE_CHEQUERAS_UNIDADES = 2
     LIMITE_TARJETA_UNIDADES = 5
-    
 
     def __init__(self,nombre,apellido,numero,dni,direccion,tipo,transacciones):
         super().__init__(
