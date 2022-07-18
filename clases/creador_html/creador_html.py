@@ -4,7 +4,7 @@ import sys
 from string import Template
 
 class CreadorHtml:
-    def _init_(self, nombreArchivo, transacciones, cliente):
+    def __init__(self, nombreArchivo, transacciones, cliente):
         self.nombreArchivo = nombreArchivo
         self.transacciones = transacciones
         self.cliente = cliente
