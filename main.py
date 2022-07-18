@@ -2,6 +2,8 @@
 # from clases import Razon_alta_chequera,Razon_alta_tarjeta_credito,Razon_compra_dolar,Razon_retiro_efectivo,Razon_transferencia_enviada,Razon_transferencia_recibida
 from clases import *
 
+nombreArchivoHtml = 'datosTransacciones.html'
+
 razonAltaChequera = Razon_alta_chequera("ALTA_CHEQUERA")
 razonAltaTarjetaCredito = Razon_alta_tarjeta_credito("ALTA_TARJETA_CREDITO")
 razonCompraDolar = Razon_compra_dolar("COMPRA_DOLAR")
@@ -23,3 +25,6 @@ for transaccion in transaccionesCliente:
 			break
 	transaccion['razon'] = razonRechazo
 
+for transaccion in transaccionesCliente:
+	print(transaccion)
+	print('----------------')
