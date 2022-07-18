@@ -23,7 +23,9 @@ transacciones = [{
 			"numero": 1,
 			"saldoEnCuenta": 100000,
 			"totalTarjetasDeCreditoActualmente" : 1,
-			"totalChequerasActualmente" : 1
+			"totalChequerasActualmente" : 1,
+			"razon" : ""
+
 		},
 		{
 			"estado": "RECHAZADA",
@@ -126,7 +128,8 @@ transacciones = [{
 			"numero": 9,
 			"saldoEnCuenta": 100000,
 			"totalTarjetasDeCreditoActualmente" : 1,
-			"totalChequerasActualmente" : 1
+			"totalChequerasActualmente" : 1,
+			"razon" : ""
 		},
 		{
 			"estado": "RECHAZADA",
@@ -141,3 +144,10 @@ transacciones = [{
 			"totalChequerasActualmente" : 1,
             "razon":"Esta es una razon de rechazo"
 		}]
+
+content = ''
+for transaccion in transacciones:
+	row = '<tr><td>'+transaccion['fecha']+'</td><td>' + transaccion['tipo']+'</td><td>' + transaccion['estado']+'</td><td>' + transaccion['monto']+'</td><td>' + transaccion['razon']+'</td></tr>'
+	
+
+	content += row
