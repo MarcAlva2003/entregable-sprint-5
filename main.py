@@ -23,3 +23,5 @@ for transaccion in transaccionesCliente:
 			break
 	transaccion['razon'] = razonRechazo
 
+creadorHtml = CreadorHtml(nombreArchivoHtml, transaccionesCliente, dataCliente)
+creadorHtml.crearHtml()
